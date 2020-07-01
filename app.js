@@ -11,10 +11,12 @@ app.use(express.urlencoded({extended: false}));
 const index = require('./routes/index');
 const books = require('./services/books/routes');
 const queue = require('./services/queue/queue');
+const pubsub = require('./services/pubsub/pubsub');
 
 // Routes
 app.use('/', index);
 app.use('/books', books);
 app.use('/queue', queue);
+app.use('/pubsub', pubsub);
 
 module.exports = app;
