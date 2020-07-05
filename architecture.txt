@@ -1,0 +1,20 @@
+Services:
+
+
+Bücher: in DB: lokiJS (bookCollection)
+
+
+/ books  | REST (CRUD)
+        |
+        | GET (polling, alle paar ms frag nach ob es etwas neues gibt: müssen wir umsetzen mit setTimeout()
+
+viele neue Bücher kommen in queue: (eigenes Service): Postman mit book-Objekt
+    /queue  (Postman: Bücher rein stellen in queue)
+    DB: array queue[]
+
+
+    /stock  | REST (CRUD)
+
+
+Nachmittag:
+    /pubsub (postet auf stock und books)
